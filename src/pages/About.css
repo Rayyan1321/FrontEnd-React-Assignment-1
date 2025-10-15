@@ -1,0 +1,113 @@
+/* ===== About Us Page Styling ===== */
+
+.about-container {
+  font-family: "Poppins", sans-serif;
+  color: #1e293b;
+  line-height: 1.7;
+  padding-bottom: 60px;
+}
+
+/* Hero Section */
+.about-hero {
+  background: linear-gradient(135deg, #4f46e5, #3b82f6, #06b6d4);
+  color: white;
+  text-align: center;
+  padding: 100px 20px 80px;
+  border-bottom-left-radius: 80px;
+  border-bottom-right-radius: 80px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.about-hero h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.about-hero p {
+  font-size: 1.1rem;
+  opacity: 0.95;
+}
+
+/* Introduction Section */
+.about-intro {
+  max-width: 900px;
+  margin: 80px auto;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.about-intro h2 {
+  font-size: 2rem;
+  color: #334155;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.about-intro h2::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(135deg, #3b82f6, #06b6d4);
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.about-intro p {
+  margin: 20px 0;
+  color: #475569;
+  font-size: 1rem;
+}
+
+/* Mission & Values Section */
+.about-values {
+  background: #f8fafc;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.about-values h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.about-values p {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  color: #475569;
+}
+
+.value-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.value-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  max-width: 300px;
+  transition: all 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.value-card h3 {
+  color: #3b82f6;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.value-card p {
+  color: #475569;
+  font-size: 0.95rem;
+}

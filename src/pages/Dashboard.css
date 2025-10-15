@@ -1,0 +1,427 @@
+/* ===== Base Dashboard Layout ===== */
+.dashboard-container {
+  padding: 40px;
+  background-color: #f7f7f7;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===== Profile Section ===== */
+.profile-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.username {
+  color: #f4b400;
+  font-weight: 600;
+}
+
+/* ===== Chart Section ===== */
+.chart-section {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 40px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.chart-section h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.chart-placeholder {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  height: 200px;
+  background: #fafafa;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.bar {
+  width: 40px;
+  background: #f4b400;
+  border-radius: 6px 6px 0 0;
+  transition: height 0.4s ease, background 0.3s ease;
+}
+
+.bar:hover {
+  background: #ffcc33;
+  transform: scale(1.05);
+}
+
+/* ===== Past Bookings Section ===== */
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.add-btn {
+  background-color: #f4b400;
+  color: #222;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.add-btn:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Booking Cards */
+.bookings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.booking-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.booking-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.booking-card h3 {
+  color: #f4b400;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.feedback {
+  background: #f4f4f4;
+  border-left: 4px solid #f4b400;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+/* ===== Popup Form ===== */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+}
+
+.popup-form {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 350px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.popup-form h3 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.popup-form input,
+.popup-form textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-family: "Poppins", sans-serif;
+}
+
+.popup-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.save-btn {
+  background: #f4b400;
+  color: #222;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  background: #ccc;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.save-btn:hover {
+  background: #333;
+  color: #fff;
+}
+
+.cancel-btn:hover {
+  background: #999;
+  color: white;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 20px;
+  }
+  .profile-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  .chart-placeholder {
+    height: 150px;
+  }
+}
+/* ===== Logout Button ===== */
+.logout-btn {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  background: #d93636;
+  transform: scale(1.05);
+}
+
+/* Adjust header for positioning */
+.dashboard-header {
+  position: relative;
+}
+/* ===== Dashboard Statistics Section ===== */
+.stats-section {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 0;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  flex: 1;
+  min-width: 220px;
+  background: linear-gradient(135deg, #f6d365, #fda085);
+  color: #222;
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.stat-card .icon {
+  font-size: 40px;
+  margin-right: 15px;
+}
+
+.stat-card.total {
+  background: linear-gradient(135deg, #ffb347, #ffcc33);
+}
+
+.stat-card.upcoming {
+  background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+}
+
+.stat-card.feedback {
+  background: linear-gradient(135deg, #d4fc79, #96e6a1);
+}
+
+.stat-card h3 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.stat-card p {
+  margin: 5px 0 0;
+  font-size: 14px;
+}
+/* ===== Smart Suggestion Panel ===== */
+.suggestion-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 15, 15, 0.65);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: flex-end;
+  align-items: stretch;
+  z-index: 1000;
+}
+
+.suggestion-panel {
+  background: #1e1e2f;
+  color: white;
+  width: 400px;
+  padding: 30px;
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.5);
+  overflow-y: auto;
+  animation: slideIn 0.5s ease forwards;
+  border-left: 3px solid #00c6ff;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.suggestion-panel h2 {
+  font-size: 24px;
+  color: #00c6ff;
+  margin-bottom: 10px;
+}
+
+.suggestion-panel p {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.suggestion-form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.suggestion-form label {
+  margin-top: 12px;
+  font-weight: 600;
+}
+
+.suggestion-form input {
+  margin-top: 6px;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background: #2a2a3c;
+  color: white;
+}
+
+.generate-btn {
+  margin-top: 20px;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.generate-btn:hover {
+  background: linear-gradient(135deg, #0072ff, #00c6ff);
+}
+
+/* Suggestions display */
+.suggestions-list {
+  margin-top: 25px;
+}
+
+.suggestion-card {
+  background: #2b2b3e;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 10px;
+  border-left: 3px solid #00c6ff;
+  transition: transform 0.2s ease;
+}
+
+.suggestion-card:hover {
+  transform: translateX(4px);
+}
+
+.suggestion-card h4 {
+  margin: 0;
+  color: #00c6ff;
+}
+
+.close-panel-btn {
+  margin-top: 25px;
+  background: transparent;
+  color: #ccc;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.close-panel-btn:hover {
+  color: #fff;
+}
+
+/* Button alignment next to "Add Booking" */
+.dashboard-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.suggest-btn {
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.suggest-btn:hover {
+  background: linear-gradient(135deg, #0072ff, #00c6ff);
+  transform: translateY(-2px);
+}
+
+
